@@ -95,26 +95,26 @@
 }
 
 -(void)updateViewProps:(NSDictionary*)mapView amapView:(AMapView*)amapView{
-    amapView.showsScale = [mapView[@"showsScale"]boolValue];
-    amapView.showsLabels =[mapView[@"showsLabels"]boolValue];
-    amapView.showsCompass =[mapView[@"showsCompass"]boolValue];
-    amapView.showsBuildings =[mapView[@"showsBuildings"]boolValue];
-    amapView.showsIndoorMap =[mapView[@"showsIndoorMap"]boolValue];
-    amapView.showsUserLocation =[mapView[@"showsUserLocation"]boolValue];
-    amapView.showsIndoorMapControl =[mapView[@"showsIndoorMapControl"]boolValue];
+    amapView.showsScale = YES;
+    amapView.showsLabels = YES;
+    amapView.showsCompass = YES;
+    amapView.showsBuildings = YES;
+    amapView.showsIndoorMap = YES;
+    amapView.showsUserLocation = YES;
+    amapView.showsIndoorMapControl = YES;
     
     
-    amapView.zoomEnabled =[mapView[@"zoomEnabled"]boolValue];
-    amapView.distanceFilter =[mapView[@"distanceFilter"]doubleValue];
+    amapView.zoomEnabled = YES;
+    amapView.distanceFilter = -1.0;
     
-    amapView.zoomLevel =[mapView[@"zoomLevel"]doubleValue];
-    amapView.minZoomLevel =[mapView[@"minZoomLevel"]doubleValue];
-    amapView.maxZoomLevel =[mapView[@"maxZoomLevel"]doubleValue];
-    amapView.rotateEnabled =[mapView[@"rotateEnabled"]boolValue];
-    amapView.rotationDegree =[mapView[@"rotationDegree"]doubleValue];
-    amapView.scrollEnabled =[mapView[@"scrollEnabled"]boolValue];
+    amapView.zoomLevel = 10.0;
+    amapView.minZoomLevel = 3.0;
+    amapView.maxZoomLevel = 20.0;
+    amapView.rotateEnabled = YES;
+    amapView.rotationDegree = 0.0;
+    amapView.scrollEnabled = YES;
     
-    amapView.mapType =[mapView[@"mapType"]integerValue];
+    amapView.mapType = 1;
     
     NSDictionary* centerCoordinate = [mapView objectForKey:@"centerCoordinate"];
     if(centerCoordinate && centerCoordinate!=(id)[NSNull null]){
